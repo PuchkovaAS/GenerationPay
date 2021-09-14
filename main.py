@@ -121,7 +121,7 @@ class Main_Window(QMainWindow):
                     box_size=15,
                     border=5,
                 )
-                qr_data = f"""ST00012|Name={self.setting.Name}|PersonalAcc={self.setting.PersonalAcc}|BankName={self.setting.BankName}|BIC={self.setting.BIC}|CorrespAcc={self.setting.CorrespAcc}|PayeeINN={self.setting.PayeeINN}|KPP={self.setting.KPP}|LASTNAME={data_all.name}|payerAddress={self.setting.payerAddress}|Purpose={self.setting.Purpose} {data_all.data.upper()}|CBC={self.setting.CBC}|OKTMO={self.setting.OKTMO}|Sum={data_all.Rub}{data_all.Cop}"""
+                qr_data = f"""ST00012|Name={self.setting.Name}|PersonalAcc={self.setting.PersonalAcc}|BankName={self.setting.BankName}|BIC={self.setting.BIC}|CorrespAcc={self.setting.CorrespAcc}|PayeeINN={self.setting.PayeeINN}|KPP={self.setting.KPP}|LASTNAME={data_all.name.upper()}|payerAddress={self.setting.payerAddress}|Purpose={self.setting.Purpose} {data_all.data.upper()}|CBC={self.setting.CBC}|OKTMO={self.setting.OKTMO}|Sum={data_all.Rub}{data_all.Cop}"""
 
                 qr.add_data(qr_data)
                 qr.make(fit=True)

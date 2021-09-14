@@ -35,6 +35,8 @@ class TableWidgetCustom(QTableWidget):
         clear = contextMenu.addAction("Очистить")
         delete_empty = contextMenu.addAction("Удалить пустые")
         add_empty = contextMenu.addAction("Добавить строку")
+        paste = contextMenu.addAction("Вставить")
+        delete = contextMenu.addAction("Удалить")
         action = contextMenu.exec_(self.mapToGlobal(event.pos()))
         if action == clear:
             self.clear_table()
@@ -42,6 +44,10 @@ class TableWidgetCustom(QTableWidget):
             self.delete_empty()
         elif action == add_empty:
             self.add_empty()
+        elif action == paste:
+            self.insert()
+        elif action == delete:
+            self.delete()
 
     def add_empty(self):
         self.setRowCount(self.rowCount() + 1)
