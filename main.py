@@ -53,7 +53,7 @@ class Main_Window(QMainWindow):
         self.setWindowIcon(QIcon(resource_path(self.setting.path_png)))
         # self.setMinimumWidth(1000)
         self.setWindowTitle("Генератор квитанций")
-        self.setMinimumHeight(800)
+        self.setMinimumHeight(600)
         self.table = TableSimple(["Учащиеся"])
         main_layout = QGridLayout()
         central_widget = QWidget(self)  # Создаём центральный виджет
